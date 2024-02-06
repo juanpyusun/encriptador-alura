@@ -1,6 +1,135 @@
+:root {
+    /*Primary color*/
+    --dark-blue-100: #609ED4;
+    --dark-blue-200: #356EA9;
+    --dark-blue-300: #0A3871;
+    --dark-blue-400: #072B61;
+    --dark-blue-500: #052051;
+
+    /*Secondary color*/
+    --light-blue-100: #F3F5FC;
+    --light-blue-200: #EFF1FA;
+    --light-blue-300: #E9ECF8;
+    --light-blue-400: #AAB2D5;
+    --light-blue-500: #757FB2;
+
+    /*Accent color*/
+    --gray-100: #CED4DA;
+    --gray-200: #ADB5BD;
+    --gray-300: #868E96;
+    --gray-400: #495057;
+    --gray-500: #343A40;
+}
+
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0;  /* Ajusta el margen si es necesario */
+    padding: 0; /* Ajusta el relleno si es necesario */
+    box-sizing: border-box; /* Ajusta el modelo de caja */
+    font-family: 'Inter', sans-serif; /* Ajusta la fuente */
     border: 1px solid red;
+}
+
+/* Estilo para los textArea*/
+textarea {    
+    background-color: transparent; /* Quita el fondo */    
+    border: none;   /* Quita el borde */    
+    outline: none;  /* Quita el borde de enfoque */    
+    overflow: auto; /* Asegura que el contenido no se desborde */
+    font-size: 32px;
+}
+
+/* Estilo para el textArea de  entrada*/
+#txtInput{
+    color: var(--dark-blue-300); /* Ajusta el color del texto */
+}
+
+/* Estilo para el textArea de salida*/
+#txtOutput{
+    color: var(--gray-400); /* Ajusta el color del texto */
+}
+
+/* Estilo para el botón primario*/
+button{
+    padding: 10px 20px; /* Ajusta el relleno */
+    margin: 10px 0; /* Ajusta el margen */
+    border-radius: 24px; /* Ajusta el radio del borde */
+    cursor: pointer; /* Ajusta el cursor */
+    font-size: 16px; /* Ajusta el tamaño de la fuente */
+    margin: 12px;
+    width: 328px;
+    height: 67px;
+}
+.btn-primary {    
+    background-color: var(--dark-blue-300); /* Ajusta el color de fondo */
+    color:  white; /* Ajusta el color del texto */
+    border: 1px solid var(--dark-blue-300); /* Ajusta el borde */
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-blue-400); /* Ajusta el color de fondo  al pasar el mouse*/
+}
+
+/* Estilo para el botón secundario*/
+.btn-secondary {    
+    background-color: transparent;
+    color:  var(--dark-blue-300);  
+    border: 1px solid var(--dark-blue-300);
+}
+
+.btn-secondary:hover {
+    background-color: var(--light-blue-200);
+}
+
+/* Estilo alerta*/
+#alert  {
+    font-size: 12px;
+    color: var(--gray-400);
+    justify-content: left; /* Ajusta la alineación */
+}
+
+/* Estilo para el contenedor main*/
+main {
+    display: flex; /* Ajusta la visualización */
+    flex-direction: row; /* Ajusta la dirección */
+    align-items: center; /* Ajusta la alineación */
+    justify-content: center; /* Ajusta la alineación */
+    height: 100vh; /* Ajusta la altura */
+    background-color: var(--light-blue-100); /* Ajusta el color de fondo */
+}
+
+/* Estilo para el contenedor container*/
+.container {
+    flex: 1; /* Ajusta el tamaño */
+}
+
+/* Estilo para el contenedor row*/
+.row {
+    display: flex; /* Ajusta la visualización */
+    flex-wrap: wrap; /* Ajusta el ajuste de línea */
+    justify-content: space-evenly; /* Ajusta la alineación */
+}
+
+/********************************************/
+
+/* Estilos para tablets y moviles */
+@media only screen  and (max-width: 1024px) {
+    /*
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border: 1px solid blue;
+    }
+    */
+}
+
+/* Estilos para desktops */
+@media only screen and (min-width: 1025px) {
+    /*
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;        border: 1px solid red;
+    }
+    */  
 }
