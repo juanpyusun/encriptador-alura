@@ -57,3 +57,22 @@ fenterlimescimesdaidenters poberr enternfrenterntair enterstenter dentersaifimes
   - Cambiar la fuente, el tamaño y el color del título;
   - Adicionar un color, degradado o imagen como fondo de tu sitio web;
   - Cambiar estilos, colores y bordes de los botones, explotar tu creatividad o puedes replicar exactamente el mismo diseño presentado, todo quedará a tu criterio.
+
+## Documentacion
+> [!IMPORTANT]
+> xx
+
+> [!NOTE]
+> xx
+
+> [!TIP]
+> xx
+
+> [!WARNING]  
+> xx
+
+> [!CAUTION]
+> xx
+
+**
+**
