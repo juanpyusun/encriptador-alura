@@ -19,6 +19,9 @@
     --gray-300: #868E96;
     --gray-400: #495057;
     --gray-500: #343A40;
+
+    /*White color*/
+    --white: #FFFFFF;
 }
 
 *{
@@ -67,10 +70,12 @@ main {
 #divDesencryption {    
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content:center;
+    padding: 8%;
     align-items: center;
-    font-size: 32px;
-    width: 42vw;
+    width: 25vw;
+    background-color: var(--white);
+    border-radius: 2rem;
     border: 1px solid red;
     flex: 80%; /* Tamaño respecto al padre */;
 }
@@ -78,16 +83,19 @@ main {
 /* Estilo para la imagenDiv*/
 #imgDiv {
     width: auto;
+    margin-top: 2rem;
 }
 
 /* Estilo para el h2 */
 h2 {
     font-size: 2rem; /* 32px similiar a 2rem ??? */
+    margin-top: 1rem ; /* Ajusta el margen superior */
 }
 
 /* Estilo para el p */
 p {
     font-size: 1rem;
+    margin-top: 1rem ;
 }
 
 /* Estilo para los textArea*/
