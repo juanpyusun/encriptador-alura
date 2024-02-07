@@ -6,7 +6,6 @@ const LLAVES = {
     "u": "ufat"
 };
 
-
 // Functions ****************************************************************
 function encriptar(message){
     let encryptedMessage = message.split("").map(function(caracter){
@@ -16,16 +15,13 @@ function encriptar(message){
 }
 
 function desencriptar(message){
-    let palabraOriginal = "";
-    let letraActual = "";
-    for (let i = 0; i < message.length; i++) {
-        letraActual += message[i];
-        if (letraActual in LLAVES2) {
-            palabraOriginal += LLAVES2[letraActual];
-            letraActual = "";
+    let desencryptedMessage = message;
+    for (const key in LLAVES) {
+        if (desencryptedMessage.includes(key)) {
+            desencryptedMessage = desencryptedMessage.replace(LLAVES[key], key);
         }
     }
-    return desencryptedMessage ="test";
+    return desencryptedMessage;
 }
 
 function comprobacionInput(input){
@@ -72,6 +68,21 @@ function copiarMensaje(){
 
 }
 
+function txtOutputConTexto(){
+    document.getElementById("txtOutput").style.display = "block";
+    document.getElementById("imgDiv").style.display = "none";
+    document.getElementById("h2ImgDiv").style.display = "block";
+    document.getElementById("pImgDiv").style.display = "none";
+    document.getElementById("btnCopiar").style.display = "block";
+}
+function txtOutputSinTexto(){
+    document.getElementById("txtOutput").style.display = "none";
+    document.getElementById("imgDiv").style.display = "block";
+    document.getElementById("h2ImgDiv").style.display = "block";
+    document.getElementById("pImgDiv").style.display = "block";
+    document.getElementById("btnCopiar").style.display = "none";
+}
+
 // Listeners ****************************************************************
 document.getElementById("txtInput").addEventListener("click", function(){
     // Al hacer click en el input, se borra el contenido del textArea.
@@ -107,6 +118,7 @@ document.getElementById("btnEncriptar").addEventListener("click", function(){
 
     } else { // si no cumple las comprobaciones se muestra el error de acuerdo a la comprobacion que incumple
         document.getElementById("alert").innerHTML = comprobacion[1];
+        document.getElementById("txtOutput").innerHTML = "";
     }
 });
 
@@ -125,15 +137,18 @@ document.getElementById("btnDesencriptar").addEventListener("click", function(){
 
     } else {
         document.getElementById("alert").innerHTML = comprobacion[1];
+        document.getElementById("txtOutput").style.display = "none";
+
     }
 });
 
 document.getElementById("btnCopiar").addEventListener("click", function(){
-    let mensaje = document.getElementById("txtOutput").innerHTML;
-    alert("Mensaje copiado al portapapeles: "+ mensaje);
-    //no deja modificar el interior del textArea
-    //document.getElementById("txtInput").innerHTML= " Mensaje copiado al portapapeles";
+    txtOutputSinTexto();
 });
+document.getElementById("btnCopiar").addEventListener("dblclick", function(){
+    txtOutputConTexto();
+});
+
 
 
 

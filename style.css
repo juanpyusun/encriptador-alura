@@ -64,6 +64,7 @@ main {
     width: 100vw; /* Ajusta el ancho */
     height: 90vh; /* Ajusta la altura */
     padding: 20px; /* Ajusta el relleno */
+    margin-top: 2rem;
 }
 
 /* Estilo para el div que contiene imagen y textos */
