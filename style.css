@@ -26,7 +26,68 @@
     padding: 0; /* Ajusta el relleno si es necesario */
     box-sizing: border-box; /* Ajusta el modelo de caja */
     font-family: 'Inter', sans-serif; /* Ajusta la fuente */
+}
+/* Estilo para el contenedor body*/
+body {
+    display: flex; /* Ajusta la visualización */
+    flex-direction: column; /* Ajusta la dirección */
+}
+/* Estilo para el contenedor header*/
+
+/* Estilo para el contenedor footer*/
+
+/* Estilo para el aside*/
+aside {
+    display: flex; /* Ajusta la visualización */
+    flex-direction: row; /* Ajusta la dirección */
+    justify-content: center; /* Ajusta la alineación */
+}
+
+/* Estilo para el contenedor main*/
+main {
+    display: flex; /* Ajusta la visualización */
+    flex-direction: row; /* Ajusta la dirección */
+    justify-content: center; /* Ajusta la alineación */
+    height: 100vh; /* Ajusta la altura */
+    background-color: var(--light-blue-100); /* Ajusta el color de fondo */
+
+}
+
+/* Estilo para el contenedor container*/
+.container {
+    display: flex; /* Ajusta la visualización */
+    flex-direction: column; /* Ajusta la dirección */
+    justify-content: center; /* Ajusta la alineación */
+    width: 100vw; /* Ajusta el ancho */
+    height: 90vh; /* Ajusta la altura */
+    padding: 20px; /* Ajusta el relleno */
+}
+
+/* Estilo para el div que contiene imagen y textos */
+#divDesencryption {    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    width: 42vw;
     border: 1px solid red;
+    flex: 80%; /* Tamaño respecto al padre */;
+}
+
+/* Estilo para la imagenDiv*/
+#imgDiv {
+    width: auto;
+}
+
+/* Estilo para el h2 */
+h2 {
+    font-size: 2rem; /* 32px similiar a 2rem ??? */
+}
+
+/* Estilo para el p */
+p {
+    font-size: 1rem;
 }
 
 /* Estilo para los textArea*/
@@ -36,16 +97,50 @@ textarea {
     outline: none;  /* Quita el borde de enfoque */    
     overflow: auto; /* Asegura que el contenido no se desborde */
     font-size: 32px;
+    height: 30vh;
+    width: 40vw;
+    border: 1px solid red;
+    flex: 20 80%; /* Tamaño respecto al padre */
+
+
+}
+
+/* Estilo para el contenedor row*/
+.row {
+    display: flex; /* Ajusta la visualización */
+    flex-wrap:nowrap; /* Ajusta el ajuste de línea */
+    justify-content: space-evenly; /* Ajusta la alineación */
+}
+
+/* Estilo para los textArea*/
+textarea {    
+    background-color: transparent; /* Quita el fondo */    
+    border: none;   /* Quita el borde */    
+    outline: none;  /* Quita el borde de enfoque */    
+    overflow: auto; /* Asegura que el contenido no se desborde */
+    font-size: 32px;
+    height: 30vh;
+    width: 40vw;
+    border: 1px solid red;
 }
 
 /* Estilo para el textArea de  entrada*/
 #txtInput{
     color: var(--dark-blue-300); /* Ajusta el color del texto */
+    resize: none; /* Evita que el usuario redimensione el textarea */
 }
 
 /* Estilo para el textArea de salida*/
 #txtOutput{
     color: var(--gray-400); /* Ajusta el color del texto */
+    resize: none; /* Evita que el usuario redimensione el textarea */
+}
+
+/* Estilo alerta*/
+#alert  {
+    font-size: 12px;
+    color: var(--gray-400);
+    justify-content: left; /* Ajusta la alineación */
 }
 
 /* Estilo para el botón primario*/
@@ -56,7 +151,7 @@ button{
     cursor: pointer; /* Ajusta el cursor */
     font-size: 16px; /* Ajusta el tamaño de la fuente */
     margin: 12px;
-    width: 328px;
+    width: 18vh;
     height: 67px;
 }
 .btn-primary {    
@@ -78,35 +173,6 @@ button{
 
 .btn-secondary:hover {
     background-color: var(--light-blue-200);
-}
-
-/* Estilo alerta*/
-#alert  {
-    font-size: 12px;
-    color: var(--gray-400);
-    justify-content: left; /* Ajusta la alineación */
-}
-
-/* Estilo para el contenedor main*/
-main {
-    display: flex; /* Ajusta la visualización */
-    flex-direction: row; /* Ajusta la dirección */
-    align-items: center; /* Ajusta la alineación */
-    justify-content: center; /* Ajusta la alineación */
-    height: 100vh; /* Ajusta la altura */
-    background-color: var(--light-blue-100); /* Ajusta el color de fondo */
-}
-
-/* Estilo para el contenedor container*/
-.container {
-    flex: 1; /* Ajusta el tamaño */
-}
-
-/* Estilo para el contenedor row*/
-.row {
-    display: flex; /* Ajusta la visualización */
-    flex-wrap: wrap; /* Ajusta el ajuste de línea */
-    justify-content: space-evenly; /* Ajusta la alineación */
 }
 
 /********************************************/

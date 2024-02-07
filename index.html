@@ -12,29 +12,36 @@
     </header>
     <main>
         <section class="container">
-            <textarea name="txtInput" id="txtInput" cols="30" rows="10">
-                Ingrese su texto aqui
+            <textarea name="txtInput" id="txtInput" autocorrect="off" autocapitalize="none" spellcheck="false">
+                Ingrese el texto aqui
             </textarea>
             <div class="row" id="alert">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
+                <svg id="svgAlert" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
                     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
                   </svg>
                 <p>Solo letras minúsculas y sin acentos</p>
             </div>
             <div class="row">
-                <button class="btn-primary">Button #1</button>
-                <button class="btn-secondary">Button #2</button>
+                <button class="btn-primary" id="btnEncriptar">Encriptar</button>
+                <button class="btn-secondary" id="btnDesencriptar">Desencriptar</button>
             </div>
         </section>
         <section class="container">
-            <textarea name="txtOutput" id="txtOutput" cols="30" rows="10" disabled>
-                lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </textarea>
-            <div class="row">
-                <button class="btn-primary">Button #3</button>
+            <div id="divDesencryption">
+                <img src="img\Muñeco.png" id="imgDiv" alt="">
+                <h2>Ningún mensaje fue encontrado</h2>
+                <p>Ingresa el texto que deseas encriptar o desencripta</p>
+            </div>
+            <div class="row" id="divRowButton">
+                <button class="btn-secondary" id="btnCopiar">Copiar</button>
             </div>
         </section>
     </main>
+    <aside>
+        <p>hola</p>
+        <p>hola</p>
+        <p>hola</p>
+    </aside>
     <footer>
         <p>lorem ipsum 2024</p>
     </footer>
