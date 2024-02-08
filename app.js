@@ -8,9 +8,16 @@ const LLAVES = {
 
 // Functions ****************************************************************
 function encriptar(message){
-    let encryptedMessage = message.split("").map(function(caracter){
+    /*let encryptedMessage = message.split("").map(function(caracter){
         return LLAVES[caracter] || caracter;
     }).join("");
+    */
+    let encryptedMessage = message;
+    for (const key in LLAVES) {
+        if (encryptedMessage.includes(key)) {
+            encryptedMessage = encryptedMessage.replaceAll(key, LLAVES[key]);
+        }
+    }
     return encryptedMessage;
 }
 
@@ -18,7 +25,7 @@ function desencriptar(message){
     let desencryptedMessage = message;
     for (const key in LLAVES) {
         if (desencryptedMessage.includes(key)) {
-            desencryptedMessage = desencryptedMessage.replace(LLAVES[key], key);
+            desencryptedMessage = desencryptedMessage.replaceAll(LLAVES[key], key);
         }
     }
     return desencryptedMessage;
